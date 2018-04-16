@@ -1,6 +1,8 @@
+# Calculation of volume of a any solid
+
 The Stokes method is probably the most useful method for calculation of volume for any solid shape.
 
-The volume of a solid can be defined as:
+The volume of a solid is defined as:
 
 ![](https://latex.codecogs.com/gif.latex?%5Ciiint%5Climits_%7BVol%7D%20dx%5C%20dx%5C%20dz)
 
