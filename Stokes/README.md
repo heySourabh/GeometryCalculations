@@ -47,6 +47,8 @@ Therefore, the volume of a solid madeup of *n* enclosing surfaces can be written
 
 Below is a program written in Java, to calculate volume of any solid:
 ```java
+@author : Sourabh Bhat (heySourabh@gmail.com)
+
 double volumeUnder(Triangle tri) {
     Point[] p = tri.points();
     double xbar = (p[0].x + p[1].x + p[2].x) / 3.0;
