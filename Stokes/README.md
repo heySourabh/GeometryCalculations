@@ -45,6 +45,7 @@ Therefore, the volume of a solid madeup of *n* enclosing surfaces can be written
 
 ![](https://latex.codecogs.com/gif.latex?%5Ctext%7BVolume%7D%20%3D%20%5Csum_%7Bi%3D0%7D%5E%7Bn-1%7D%20%5Cvec%7BA%7D_%7Bix%7D%5C%2C%20%5Cbar%7Bx%7D_i)
 
+## Code
 Below is a program written in Java, to calculate volume of any solid:
 ```java
 @author : Sourabh Bhat (heySourabh@gmail.com)
