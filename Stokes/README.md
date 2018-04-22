@@ -1,4 +1,4 @@
-# Calculation of volume of a any solid
+# Calculation of volume of any solid
 
 The Stokes method is probably the most useful method for calculation of volume for any solid shape.
 
