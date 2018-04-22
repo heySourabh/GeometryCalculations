@@ -48,7 +48,7 @@ Therefore, the volume of a solid madeup of *n* enclosing surfaces can be written
 ## Code
 Below is a program written in Java, to calculate volume of any solid:
 ```java
-@author : Sourabh Bhat (heySourabh@gmail.com)
+@author Sourabh Bhat (heySourabh@gmail.com)
 
 /**
  * Calculates the volume of a solid formed by a set of triangles.
@@ -81,6 +81,8 @@ private double volumeUnder(Triangle tri) {
 A simple implementation of required classes is provided below. For more elaborate implementation look at the implementation in repository [CFDSolver](https://github.com/heySourabh/CFDSolver/blob/master/src/main/geom/Geometry.java).
 
 ```java
+@author Sourabh Bhat (heySourabh@gmail.com)
+
 public class Triangle {
     private final Point[] points;
 
@@ -96,6 +98,8 @@ public class Triangle {
 -----
 
 ```java
+@author Sourabh Bhat (heySourabh@gmail.com)
+
 public class Point {
     public final double x, y, z;
 
@@ -109,6 +113,8 @@ public class Point {
 -----
 
 ```java
+@author Sourabh Bhat (heySourabh@gmail.com)
+
 public class Vector {
     public final double x, y, z;
 
