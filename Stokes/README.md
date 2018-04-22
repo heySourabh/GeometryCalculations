@@ -50,7 +50,22 @@ Below is a program written in Java, to calculate volume of any solid:
 ```java
 @author : Sourabh Bhat (heySourabh@gmail.com)
 
-double volumeUnder(Triangle tri) {
+/**
+ * The triangles must have points either all-clockwise or all-anti-clockwise,
+ * looking from outside of the solid.
+ *
+ * @param triangles array of triangles
+ * @return non-negative volume enclosed by the set of triangles
+ */
+public double volume(Triangle[] triangles) {
+    double volume = 0.0;
+    for (Triangle t : triangles) {
+        volume += volumeUnder(t);
+    }
+    return Math.abs(volume);
+}
+
+private double volumeUnder(Triangle tri) {
     Point[] p = tri.points();
     double xbar = (p[0].x + p[1].x + p[2].x) / 3.0;
     Vector vab = new Vector(p[0], p[1]);
@@ -60,20 +75,46 @@ double volumeUnder(Triangle tri) {
 
     return ax * xbar * 0.5;
 }
-
-/**
- * The triangles must have points either all-clockwise or all-anti-clockwise, 
- * looking from outside of the solid.
- *
- * @param triangles array of triangles
- * @return non-negative volume enclosed by the set of triangles
- */
-double volume(Triangle[] triangles) {
-    double volume = 0.0;
-    for (Triangle t : triangles) {
-        volume += volumeUnder(t);
-    }
-    return Math.abs(volume);
-}
 ```
 
+A simple implementation of required classes is provided below. For more elaborate implementation look at the implementation in repository [CFDSolver](https://github.com/heySourabh/CFDSolver/blob/master/src/main/geom/Geometry.java).
+
+```java
+public class Triangle {
+    private final Point[] points;
+
+    public Triangle(Point p0, Point p1, Point p2) {
+        points = new Point[]{p0, p1, p2};
+    }
+
+    Point[] points() {
+        return points;
+    }
+}
+```
+-----
+
+```java
+public class Point {
+    public final double x, y, z;
+
+    public Point(double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+}
+```
+-----
+
+```java
+public class Vector {
+    public final double x, y, z;
+
+    public Vector(Point from, Point to) {
+        this.x = to.x - from.x;
+        this.y = to.y - from.y;
+        this.z = to.z - from.z;
+    }
+}
+```
