@@ -51,6 +51,7 @@ Below is a program written in Java, to calculate volume of any solid:
 @author : Sourabh Bhat (heySourabh@gmail.com)
 
 /**
+ * Calculates the volume of a solid formed by a set of triangles.
  * The triangles must have points either all-clockwise or all-anti-clockwise,
  * looking from outside of the solid.
  *
