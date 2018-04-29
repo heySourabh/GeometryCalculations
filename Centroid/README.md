@@ -4,5 +4,5 @@ The centroid, ![](https://latex.codecogs.com/gif.latex?%5Cbar%7Br%7D), of a soli
 
 where, ![](https://latex.codecogs.com/gif.latex?r) is a position vector. The centroid has a few very interesting properties such as:
 1. For a homogeneous solid it is the _center of mass_
-2. The centroid can be translated / rotated to any co-ordinate system by simple linear transformation
+2. The centroid can be translated / rotated to a local co-ordinate system easily
 3. For any _linear function_, the average of the function inside the solid can be calculated by simply evaluating the function at the centroid point.
