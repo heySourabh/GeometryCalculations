@@ -56,6 +56,6 @@ Similarly,
 ![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bz%7D%3D%5Cfrac%7B1%7D%7B6%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bt%3D0%7D%5E%7BN-1%7Dn_%7Bz%7D%5Csum_%7Bi%3D0%7D%5E%7B2%7Dn_%7Bzi%7D%5E%7Be%7D%5Cint%5Climits_%7BL_%7Bi%7D%7Dz%5E%7B3%7D%5C%20dL)
 
 The line integrations can be carried out numerically using 3 or more quadrature points. To reduce the numerical error it is advisable to translate all the enclosing triangles of the solid close to the origin. This can be done by translation of the solid by  ![](https://latex.codecogs.com/gif.latex?%5Cleft%28-x_%7Bmin%7D%2C-y_%7Bmin%7D%2C-z_%7Bmin%7D%5Cright%29)
-. After calculation of the centroid, the centroid can be translated back by
+. After the calculations, the centroid can be translated back by
 ![](https://latex.codecogs.com/gif.latex?%5Cleft%28x_%7Bmin%7D%2Cy_%7Bmin%7D%2Cz_%7Bmin%7D%5Cright%29)
 .
