@@ -41,7 +41,7 @@ is constant the integration becomes,
 ![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3D%5Cfrac%7B1%7D%7B3%7Dn_%7Bx%7D%5Cint%5Climits_%7BL%7Dx%5E%7B3%7Dn_%7Bx%7D%5E%7Be%7D%5C%20dL)
 
 where, ![](https://latex.codecogs.com/gif.latex?n_%7Bx%7D%5E%7Be%7D)
-is the ![](https://latex.codecogs.com/gif.latex?x)-component of unit-normal to the edges of the triangle pointing outward of the triangle. For each of the edge of the triagle the normal is constant, therefore we can pull the normal outside of the integration,
+is the ![](https://latex.codecogs.com/gif.latex?x)-component of unit-normal to the edges of the triangle pointing outward of the triangle. For each of the edge of the triangle the normal is constant, therefore we can pull the normal outside of the integration,
 
 ![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3D%5Cfrac%7B1%7D%7B3%7Dn_%7Bx%7D%5Csum_%7Bi%3D0%7D%5E%7B2%7Dn_%7Bxi%7D%5E%7Be%7D%5Cint%5Climits_%7BL_%7Bi%7D%7Dx%5E%7B3%7D%5C%20dL)
 
@@ -61,3 +61,53 @@ The line integrations can be carried out numerically using 3 or more quadrature 
 . After the calculations, the centroid can be translated back by
 ![](https://latex.codecogs.com/gif.latex?%5Cleft%28x_%7Bmin%7D%2Cy_%7Bmin%7D%2Cz_%7Bmin%7D%5Cright%29)
 .
+
+The line integral can also be be evaluated algebraically,
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cintop_%7Bl%3D0%7D%5E%7Bl%3DL%7Dx%5E%7B3%7D%5C%20dl)
+
+ Substituting a parametric equation for ![](https://latex.codecogs.com/gif.latex?x)
+  as,
+
+  ![](https://latex.codecogs.com/gif.latex?x%3Dx_%7Ba%7D&plus;%5Cfrac%7Bl%7D%7BL%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29)
+
+ where ![](https://latex.codecogs.com/gif.latex?x_%7Ba%7D)
+  and ![](https://latex.codecogs.com/gif.latex?x_%7Bb%7D)
+  are the points of the triangle edge, which results in,
+
+![](https://latex.codecogs.com/gif.latex?%5Cint%5Climits_%7Bl%3D0%7D%5E%7Bl%3DL%7D%5Cleft%28x_%7Ba%7D&plus;%5Cfrac%7Bl%7D%7BL%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5Cright%29%5E%7B3%7D%5C%20dl)
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cint%5Climits_%7Bl%3D0%7D%5E%7Bl%3DL%7D%5Cleft%5Bx_%7Ba%7D%5E%7B3%7D&plus;%5Cleft%28%5Cfrac%7Bl%7D%7BL%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5Cright%29%5E%7B3%7D&plus;3x_%7Ba%7D%5Cleft%28%5Cfrac%7Bl%7D%7BL%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5Cright%29%5E%7B2%7D&plus;3%5Cleft%28%5Cfrac%7Bl%7D%7BL%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5Cright%29x_%7Ba%7D%5E%7B2%7D%5Cright%5D%5C%20dl)
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cleft%5Bx_%7Ba%7D%5E%7B3%7Dl&plus;%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29%5E%7B3%7D%5Cfrac%7Bl%5E%7B4%7D%7D%7B4%7D&plus;x_%7Ba%7D%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29%5E%7B2%7Dl%5E%7B3%7D&plus;%5Cfrac%7B3%7D%7B2%7Dx_%7Ba%7D%5E%7B2%7D%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29l%5E%7B2%7D%5Cright%5D_%7Bl%3D0%7D%5E%7Bl%3DL%7D)
+
+ ![](https://latex.codecogs.com/gif.latex?x_%7Ba%7D%5E%7B3%7DL&plus;%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29%5E%7B3%7D%5Cfrac%7BL%5E%7B4%7D%7D%7B4%7D&plus;x_%7Ba%7D%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29%5E%7B2%7DL%5E%7B3%7D&plus;%5Cfrac%7B3%7D%7B2%7Dx_%7Ba%7D%5E%7B2%7D%5Cleft%28%5Cfrac%7Bx_%7Bb%7D-x_%7Ba%7D%7D%7BL%7D%5Cright%29L%5E%7B2%7D)
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cleft%5Bx_%7Ba%7D%5E%7B3%7D&plus;%5Cfrac%7B1%7D%7B4%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5E%7B3%7D&plus;x_%7Ba%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5E%7B2%7D&plus;%5Cfrac%7B3%7D%7B2%7Dx_%7Ba%7D%5E%7B2%7D%5Cleft%28x_%7Bb%7D-x_%7Ba%7D%5Cright%29%5Cright%5DL)
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cleft%5Bx_%7Ba%7D%5E%7B3%7D&plus;%5Cfrac%7B1%7D%7B4%7D%5Cleft%28x_%7Bb%7D%5E%7B3%7D-x_%7Ba%7D%5E%7B3%7D-3x_%7Ba%7Dx_%7Bb%7D%5E%7B2%7D&plus;3x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D%5Cright%29&plus;%5Cleft%28x_%7Ba%7Dx_%7Bb%7D%5E%7B2%7D&plus;x_%7Ba%7D%5E%7B3%7D-2x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D%5Cright%29&plus;%5Cfrac%7B3%7D%7B2%7D%5Cleft%28x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D-x_%7Ba%7D%5E%7B3%7D%5Cright%29%5Cright%5DL)
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cfrac%7B1%7D%7B4%7D%5Cleft%5B%5Cleft%284x_%7Ba%7D%5E%7B3%7D-x_%7Ba%7D%5E%7B3%7D&plus;4x_%7Ba%7D%5E%7B3%7D-6x_%7Ba%7D%5E%7B3%7D%5Cright%29&plus;x_%7Bb%7D%5E%7B3%7D&plus;%5Cleft%283x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D-8x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D&plus;6x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D%5Cright%29&plus;%5Cleft%284x_%7Ba%7Dx_%7Bb%7D%5E%7B2%7D-3x_%7Ba%7Dx_%7Bb%7D%5E%7B2%7D%5Cright%29%5Cright%5DL)
+
+![](https://latex.codecogs.com/gif.latex?%5Ctherefore%5Cqquad%5Cintop_%7Bl%3D0%7D%5E%7Bl%3DL%7Dx%5E%7B3%7D%5C%20dl%3D%5Cfrac%7B1%7D%7B4%7D%5Cleft%5Bx_%7Ba%7D%5E%7B3%7D&plus;x_%7Bb%7D%5E%7B3%7D&plus;x_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D&plus;x_%7Ba%7Dx_%7Bb%7D%5E%7B2%7D%5Cright%5DL)
+
+ Similarly,
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cint%5Climits_%7Bl%3D0%7D%5E%7Bl%3DL%7Dy%5E%7B3%7D%5C%20dl%3D%5Cfrac%7B1%7D%7B4%7D%5Cleft%5By_%7Ba%7D%5E%7B3%7D&plus;y_%7Bb%7D%5E%7B3%7D&plus;y_%7Ba%7D%5E%7B2%7Dy_%7Bb%7D&plus;y_%7Ba%7Dy_%7Bb%7D%5E%7B2%7D%5Cright%5DL)
+
+ and
+
+ ![](https://latex.codecogs.com/gif.latex?%5Cint%5Climits_%7Bl%3D0%7D%5E%7Bl%3DL%7Dz%5E%7B3%7D%5C%20dl%3D%5Cfrac%7B1%7D%7B4%7D%5Cleft%5Bz_%7Ba%7D%5E%7B3%7D&plus;z_%7Bb%7D%5E%7B3%7D&plus;z_%7Ba%7D%5E%7B2%7Dx_%7Bb%7D&plus;z_%7Ba%7Dz_%7Bb%7D%5E%7B2%7D%5Cright%5DL)
+
+
+The formula for centroid can be written as,
+
+![](https://latex.codecogs.com/gif.latex?%5Clarge%20%5Cbar%7Bx%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bt%3D0%7D%5E%7BN-1%7Dn_%7Bxt%7D%5Csum_%7Bi%3D0%7D%5E%7B2%7Dn_%7Bxi%7D%5E%7Be%7D%5Cleft%5Bx_%7Bai%7D%5E%7B3%7D&plus;x_%7Bbi%7D%5E%7B3%7D&plus;x_%7Bai%7D%5E%7B2%7Dx_%7Bbi%7D&plus;x_%7Bai%7Dx_%7Bbi%7D%5E%7B2%7D%5Cright%5DL_%7Bi%7D)
+
+ Similarly,
+
+ ![](https://latex.codecogs.com/gif.latex?%5Clarge%20%5Cbar%7By%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bt%3D0%7D%5E%7BN-1%7Dn_%7Byt%7D%5Csum_%7Bi%3D0%7D%5E%7B2%7Dn_%7Byi%7D%5E%7Be%7D%5Cleft%5By_%7Bai%7D%5E%7B3%7D&plus;y_%7Bbi%7D%5E%7B3%7D&plus;y_%7Bai%7D%5E%7B2%7Dy_%7Bbi%7D&plus;y_%7Bai%7Dy_%7Bbi%7D%5E%7B2%7D%5Cright%5DL_%7Bi%7D)
+
+and
+
+ ![](https://latex.codecogs.com/gif.latex?%5Clarge%20%5Cbar%7Bz%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bt%3D0%7D%5E%7BN-1%7Dn_%7Bzt%7D%5Csum_%7Bi%3D0%7D%5E%7B2%7Dn_%7Bzi%7D%5E%7Be%7D%5Cleft%5Bz_%7Bai%7D%5E%7B3%7D&plus;z_%7Bbi%7D%5E%7B3%7D&plus;z_%7Bai%7D%5E%7B2%7Dz_%7Bbi%7D&plus;z_%7Bai%7Dz_%7Bbi%7D%5E%7B2%7D%5Cright%5DL_%7Bi%7D)
