@@ -156,7 +156,7 @@ public static Point centroid(TriGeom[] triangles) {
 
 ```Java
 /**
-* author Sourabh Bhat (heySourabh@gmail.com)
+* @author Sourabh Bhat (heySourabh@gmail.com)
 **/
 private static Vector scaledCentroidUnder(TriGeom tri) {
     Point[] p = tri.points();
@@ -176,3 +176,5 @@ private static Vector scaledCentroidUnder(TriGeom tri) {
     return new Vector(xc, yc, zc);
 }
 ```
+
+The Vector and Point classes can be implemented with basic required functionality. The boundingBox() translateTriangles() methods can be implemented to reduce error, or they can be omitted and the corresponding lines in the code can be removed. The signedVolume() method can be calculated as given in the [Volume](https://github.com/heySourabh/GeometryCalculations/tree/master/Volume) page. For more elaborate implementations have a look at the [GeometryHelper](https://github.com/heySourabh/CFDSolver/blob/master/src/main/geom/GeometryHelper.java) class in my [CFDSolver](https://github.com/heySourabh/CFDSolver) repository.
