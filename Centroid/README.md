@@ -88,27 +88,26 @@ where, ![](https://latex.codecogs.com/gif.latex?%5Cleft%7C%5Cpartial%5Cleft%28%5
 it is just the ratio of area of the triangle in the ![](https://latex.codecogs.com/gif.latex?%5Cxi-%5Ceta) co-ordinate
 system to area of triangle in ![](https://latex.codecogs.com/gif.latex?u-v) co-ordinate system. Since the area of the triangle in ![](https://latex.codecogs.com/gif.latex?%5Cxi-%5Ceta) co-ordinate system is 0.5, the scaling factor becomes,
 
-![](https://latex.codecogs.com/gif.latex?A_%7BT%7D%3D%5Cfrac%7B1%7D%7B%5Cleft%7C%5Cpartial%5Cleft%28%5Cxi%2C%5Ceta%5Cright%29/%5Cpartial%5Cleft%28u%2Cv%5Cright%29%5Cright%7C%7D%3D%5Cleft%7C%5Coverrightarrow%7B0-1%7D%5Ctimes%5Coverrightarrow%7B0-2%7D%5Cright%7C)
+![](https://latex.codecogs.com/gif.latex?%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C%3D%5Cfrac%7B1%7D%7B%5Cleft%7C%5Cpartial%5Cleft%28%5Cxi%2C%5Ceta%5Cright%29/%5Cpartial%5Cleft%28u%2Cv%5Cright%29%5Cright%7C%7D%3D%5Cleft%7C%5Coverrightarrow%7B0-1%7D%5Ctimes%5Coverrightarrow%7B0-2%7D%5Cright%7C)
 
-which is the magnitude of the cross-product of the vectors made from
-edges 0-1 and 0-2. Therefore ![](https://latex.codecogs.com/gif.latex?A_%7BT%7D) is twice the area of the triangle.
-The integration therefore becomes,
+where ![](https://latex.codecogs.com/gif.latex?%5Cvec%7BA%7D_%7BT%7D%3D%5Coverrightarrow%7B0-1%7D%5Ctimes%5Coverrightarrow%7B0-2%7D) is the cross-product of the vectors made from edges 0-1 and 0-2. Therefore ![](https://latex.codecogs.com/gif.latex?%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C) is twice the area of the triangle. The integration therefore becomes,
 
-![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3DA_%7BT%7D%5C%2Cn_%7Bx%7D%5Ciint%5Climits_%7BA%7D%5Cleft%5Bx_%7B0%7D&plus;%5Cleft%28x_%7B1%7D-x_%7B0%7D%5Cright%29%5Cxi&plus;%5Cleft%28x_%7B2%7D-x_%7B0%7D%5Cright%29%5Ceta%5Cright%5D%5E%7B2%7D%5C%20d%5Cxi%5C%2Cd%5Ceta)
+![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3D%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C%5C%2Cn_%7Bx%7D%5Ciintop_%7BA%7D%5Cleft%5Bx_%7B0%7D&plus;%5Cleft%28x_%7B1%7D-x_%7B0%7D%5Cright%29%5Cxi&plus;%5Cleft%28x_%7B2%7D-x_%7B0%7D%5Cright%29%5Ceta%5Cright%5D%5E%7B2%7D%5C%20d%5Cxi%5C%2Cd%5Ceta)
 
 with limits of the integration,
 
-![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3DA_%7BT%7D%5C%2Cn_%7Bx%7D%5Cintop_%7B%5Ceta%3D0%7D%5E%7B%5Ceta%3D1%7D%5C%20%5Cintop_%7B%5Cxi%3D0%7D%5E%7B%5Cxi%3D1-%5Ceta%7D%5Cleft%5Bx_%7B0%7D&plus;%5Cleft%28x_%7B1%7D-x_%7B0%7D%5Cright%29%5Cxi&plus;%5Cleft%28x_%7B2%7D-x_%7B0%7D%5Cright%29%5Ceta%5Cright%5D%5E%7B2%7D%5C%20d%5Cxi%5C%20d%5Ceta)
+![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3D%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C%5C%2Cn_%7Bx%7D%5Cint%5Climits_%7B%5Ceta%3D0%7D%5E%7B%5Ceta%3D1%7D%5C%20%5Cint%5Climits_%7B%5Cxi%3D0%7D%5E%7B%5Cxi%3D1-%5Ceta%7D%5Cleft%5Bx_%7B0%7D&plus;%5Cleft%28x_%7B1%7D-x_%7B0%7D%5Cright%29%5Cxi&plus;%5Cleft%28x_%7B2%7D-x_%7B0%7D%5Cright%29%5Ceta%5Cright%5D%5E%7B2%7D%5C%20d%5Cxi%5C%20d%5Ceta)
 
 Using Maxima symbolic manipulator we can simplify this as,
 
-![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3DA_%7BT%7D%5C%2Cn_%7Bx%7D%5Cleft%28%5Cfrac%7Bx_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%7D%7B12%7D%5Cright%29)
+![](https://latex.codecogs.com/gif.latex?I_%7Bx%7D%3D%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C%5C%2Cn_%7Bx%7D%5Cleft%28%5Cfrac%7Bx_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%7D%7B12%7D%5Cright%29)
 
-Therefore the formula for centroid of a solid with ![](https://latex.codecogs.com/gif.latex?N) enclosing triangles becomes,
+Therefore the formula for centroid of a solid with ![](https://latex.codecogs.com/gif.latex?N) enclosing
+triangles becomes,
 
-![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bx%7D%3D%5Cfrac%7B1%7D%7BVolume%7D%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7DA_%7BTi%7D%5C%2Cn_%7Bxi%7D%5Cleft%28%5Cfrac%7Bx_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%7D%7B12%7D%5Cright%29_%7Bi%7D)
+![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bx%7D%3D%5Cfrac%7B1%7D%7BVolume%7D%5Cfrac%7B1%7D%7B2%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7D%5Cleft%7C%5Cvec%7BA%7D_%7BTi%7D%5Cright%7C%5C%2Cn_%7Bxi%7D%5Cleft%28%5Cfrac%7Bx_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%7D%7B12%7D%5Cright%29_%7Bi%7D)
 
-![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bx%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7DA_%7BTi%7D%5C%2Cn_%7Bxi%7D%5Cleft%28x_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%5Cright%29_%7Bi%7D)
+![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bx%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7D%5Cleft%7C%5Cvec%7BA%7D_%7BTi%7D%5Cright%7C%5C%2Cn_%7Bxi%7D%5Cleft%28x_%7B0%7D%5E%7B2%7D&plus;x_%7B1%7D%5E%7B2%7D&plus;x_%7B2%7D%5E%7B2%7D&plus;x_%7B0%7Dx_%7B1%7D&plus;x_%7B0%7Dx_%7B2%7D&plus;x_%7B1%7Dx_%7B2%7D%5Cright%29_%7Bi%7D)
 
 Similarly,
 
@@ -116,9 +115,12 @@ Similarly,
 
 and
 
-![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bz%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7DA_%7BTi%7D%5C%2Cn_%7Bzi%7D%5Cleft%28z_%7B0%7D%5E%7B2%7D&plus;z_%7B1%7D%5E%7B2%7D&plus;z_%7B2%7D%5E%7B2%7D&plus;z_%7B0%7Dz_%7B1%7D&plus;z_%7B0%7Dz_%7B2%7D&plus;z_%7B1%7Dz_%7B2%7D%5Cright%29_%7Bi%7D)
+![](https://latex.codecogs.com/gif.latex?%5Cbar%7Bz%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7D%5Cleft%7C%5Cvec%7BA%7D_%7BTi%7D%5Cright%7C%5C%2Cn_%7Bzi%7D%5Cleft%28z_%7B0%7D%5E%7B2%7D&plus;z_%7B1%7D%5E%7B2%7D&plus;z_%7B2%7D%5E%7B2%7D&plus;z_%7B0%7Dz_%7B1%7D&plus;z_%7B0%7Dz_%7B2%7D&plus;z_%7B1%7Dz_%7B2%7D%5Cright%29_%7Bi%7D)
 
-It is advisable to translate the solid close to the origin for the
-numerical calculations so that the numerical errors due to squaring
-of large numbers is reduced. The actual centroid can be obtained by
-translating back by the same amount.
+The above expressions can be further simplified by realizing that
+![](https://latex.codecogs.com/gif.latex?%5Cleft%7C%5Cvec%7BA%7D_%7BT%7D%5Cright%7C%5C%2C%5Cleft%28n_%7Bx%7D%2Cn_%7By%7D%2Cn_%7Bz%7D%5Cright%29%3D%5Coverrightarrow%7B0-1%7D%5Ctimes%5Coverrightarrow%7B0-2%7D), which can be calculated only once and the ![](https://latex.codecogs.com/gif.latex?x)- ![](https://latex.codecogs.com/gif.latex?y)- and ![](https://latex.codecogs.com/gif.latex?z)-components
+can be used in respective equations. It is advisable to translate
+the solid close to the origin for the numerical calculations so that
+the numerical errors due to squaring of large numbers is reduced.
+The actual centroid can be obtained by translating back by the same
+amount.

@@ -1,0 +1,545 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+The centroid, 
+\begin_inset Formula $\bar{r}$
+\end_inset
+
+, of a solid is defined as,
+\begin_inset Formula 
+\[
+\bar{r}=\frac{1}{Volume}\iiintop_{V}r\ dV=\frac{1}{Volume}\iiintop_{V}\left(x,y,z\right)\ dV
+\]
+
+\end_inset
+
+where, 
+\begin_inset Formula $r$
+\end_inset
+
+ is a position vector.
+ The centroid has a few very interesting properties such as: 
+\end_layout
+
+\begin_layout Standard
+For a homogeneous solid the _center of mass_ is located at the centroid
+ 2.
+ For any _linear function_, the average of the function inside the solid
+ can be calculated by simply evaluating the function at the centroid point.
+\end_layout
+
+\begin_layout Standard
+The calculation of the centroid of a solid can be done by using the divergence
+ theorem to reduce the volume integral to area integral.
+\begin_inset Formula 
+\[
+\bar{r}=\frac{1}{Volume}\iiintop_{V}\left(x,y,z\right)\ dV=\frac{1}{Volume}\iiintop_{V}\left(x\frac{\partial x}{\partial x},y\frac{\partial y}{\partial y},z\frac{\partial z}{\partial z}\right)\ dV
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{r}=\frac{1}{Volume}\frac{1}{2}\iiintop_{V}\left(\frac{\partial x^{2}}{\partial x},\frac{\partial y^{2}}{\partial y},\frac{\partial z^{2}}{\partial z}\right)\ dV
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{x}=\frac{1}{Volume}\frac{1}{2}\iintop_{A}x^{2}\ n_{x}\ dA
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{y}=\frac{1}{Volume}\frac{1}{2}\iintop_{A}y^{2}\ n_{y}\ dA
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{z}=\frac{1}{Volume}\frac{1}{2}\iintop_{A}z^{2}\ n_{z}\ dA
+\]
+
+\end_inset
+
+where, 
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{z}$
+\end_inset
+
+ are the components of the centroid in 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+ and 
+\begin_inset Formula $z$
+\end_inset
+
+ directions respectively.
+ The unit normal to the enclosing surface, 
+\begin_inset Formula $\hat{n}=\left(n_{x},n_{y},n_{z}\right)$
+\end_inset
+
+, points outward of the solid.
+ Thus, we can evaluate the centroid by calculation of second moment of area
+ over the enclosing surface of the solid.
+\end_layout
+
+\begin_layout Standard
+If we divide the enclosing surface into triangles, then for each of the
+ triangle the normal remains constant and therefore can be moved out of
+ the integral.
+ Let us consider the integration of 
+\begin_inset Formula $x$
+\end_inset
+
+-coordinate for an individual triangle in space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+I_{x}=\iintop_{A}x^{2}\ n_{x}\ dA
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $n_{x}$
+\end_inset
+
+ is constant the integration becomes,
+\begin_inset Formula 
+\[
+I_{x}=n_{x}\iintop_{A}x^{2}\ dA
+\]
+
+\end_inset
+
+The area integration needs to be carried out in the plane of the triangular
+ element.
+ Let us consider an arbitrary triangle with vertex 0, 1, 2.
+ Let us also consider a new 2-dimensional 
+\begin_inset Formula $u-v$
+\end_inset
+
+ co-ordinate system with origin at the vertex 0 of the triangle, the 
+\begin_inset Formula $u$
+\end_inset
+
+-axis aligned to base of the triangle pointing towards vertex 1.
+ The 
+\begin_inset Formula $v$
+\end_inset
+
+-axis is perpendicular to the 
+\begin_inset Formula $u$
+\end_inset
+
+-axis in the plane of the triangle.
+ The integration therefore becomes,
+\begin_inset Formula 
+\[
+I_{x}=n_{x}\iintop_{A}x^{2}\ du\,dv
+\]
+
+\end_inset
+
+The integration can be vastly simplified by using natural co-ordinate system,
+ 
+\begin_inset Formula $\xi-\eta$
+\end_inset
+
+, such that the 
+\begin_inset Formula $\xi$
+\end_inset
+
+-axis is aligned to 
+\begin_inset Formula $u$
+\end_inset
+
+-axis and scaled such that the vertex 0 is at 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ and vertex 1 is at 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\eta$
+\end_inset
+
+-axis is aligned to triangle edge 0-2 and scaled such that the vertex 0
+ is at 
+\begin_inset Formula $\eta=0$
+\end_inset
+
+ and vertex 2 is at 
+\begin_inset Formula $\eta=1$
+\end_inset
+
+.
+ The region of integration in the 
+\begin_inset Formula $\xi-\eta$
+\end_inset
+
+ co-ordinate system therefore simplifies to a right-angled triangle, which
+ is easy to integrate.
+ The integrand, 
+\begin_inset Formula $x^{2}\ du\,dv$
+\end_inset
+
+, needs to be transformed for the 
+\begin_inset Formula $\xi-\eta$
+\end_inset
+
+ co-ordinate system.
+ The linear transformation for 
+\begin_inset Formula $x$
+\end_inset
+
+ can be obtained as,
+\begin_inset Formula 
+\[
+x=c_{0}+c_{1}\xi+c_{2}\eta
+\]
+
+\end_inset
+
+Now, substituting the constraints on the co-ordinate system, at 
+\begin_inset Formula $\xi=0,\eta=0$
+\end_inset
+
+; 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, we get,
+\begin_inset Formula 
+\[
+x_{0}=c_{0}+c_{1}\times0+c_{2}\times0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c_{0}=x_{0}
+\]
+
+\end_inset
+
+Substituting, at 
+\begin_inset Formula $\xi=1,\eta=0$
+\end_inset
+
+; 
+\begin_inset Formula $x=x_{1}$
+\end_inset
+
+, we get,
+\begin_inset Formula 
+\[
+x_{1}=x_{0}+c_{1}\times1+c_{2}\times0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{1}=x_{1}-x_{0}
+\]
+
+\end_inset
+
+Substituting, at 
+\begin_inset Formula $\xi=0,\eta=1$
+\end_inset
+
+; 
+\begin_inset Formula $x=x_{2}$
+\end_inset
+
+, we get,
+\begin_inset Formula 
+\[
+x_{2}=x_{0}+c_{1}\times0+c_{2}\times1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{2}=x_{2}-x_{0}
+\]
+
+\end_inset
+
+Therefore in the new co-ordinate system, 
+\begin_inset Formula 
+\[
+x=x_{0}+\left(x_{1}-x_{0}\right)\xi+\left(x_{2}-x_{0}\right)\eta
+\]
+
+\end_inset
+
+similarly, 
+\begin_inset Formula 
+\[
+y=y_{0}+\left(y_{1}-y_{0}\right)\xi+\left(y_{2}-y_{0}\right)\eta
+\]
+
+\end_inset
+
+and,
+\begin_inset Formula 
+\[
+z=z_{0}+\left(z_{1}-z_{0}\right)\xi+\left(z_{2}-z_{0}\right)\eta
+\]
+
+\end_inset
+
+The integration now becomes,
+\begin_inset Formula 
+\[
+I_{x}=n_{x}\iintop_{A}\left[x_{0}+\left(x_{1}-x_{0}\right)\xi+\left(x_{2}-x_{0}\right)\eta\right]^{2}\ du\,dv
+\]
+
+\end_inset
+
+Also elemental area,
+\begin_inset Formula 
+\[
+du\,dv=\frac{1}{\left|\partial\left(\xi,\eta\right)/\partial\left(u,v\right)\right|}d\xi\,d\eta
+\]
+
+\end_inset
+
+where, 
+\begin_inset Formula $\left|\partial\left(\xi,\eta\right)/\partial\left(u,v\right)\right|$
+\end_inset
+
+ is the determinant of the Jacobian.
+ In this linear transformation it is just the ratio of area of the triangle
+ in the 
+\begin_inset Formula $\xi-\eta$
+\end_inset
+
+ co-ordinate system to area of triangle in 
+\begin_inset Formula $u-v$
+\end_inset
+
+ co-ordinate system.
+ Since the area of the triangle in 
+\begin_inset Formula $\xi-\eta$
+\end_inset
+
+ co-ordinate system is 0.5, the scaling factor becomes,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\vec{A}_{T}\right|=\frac{1}{\left|\partial\left(\xi,\eta\right)/\partial\left(u,v\right)\right|}=\left|\overrightarrow{0-1}\times\overrightarrow{0-2}\right|
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\vec{A}_{T}=\overrightarrow{0-1}\times\overrightarrow{0-2}$
+\end_inset
+
+ is the cross-product of the vectors made from edges 0-1 and 0-2.
+ Therefore 
+\begin_inset Formula $\left|\vec{A}_{T}\right|$
+\end_inset
+
+ is twice the area of the triangle.
+ The integration therefore becomes,
+\begin_inset Formula 
+\[
+I_{x}=\left|\vec{A}_{T}\right|\,n_{x}\iintop_{A}\left[x_{0}+\left(x_{1}-x_{0}\right)\xi+\left(x_{2}-x_{0}\right)\eta\right]^{2}\ d\xi\,d\eta
+\]
+
+\end_inset
+
+with limits of the integration,
+\begin_inset Formula 
+\[
+I_{x}=\left|\vec{A}_{T}\right|\,n_{x}\intop_{\eta=0}^{\eta=1}\ \intop_{\xi=0}^{\xi=1-\eta}\left[x_{0}+\left(x_{1}-x_{0}\right)\xi+\left(x_{2}-x_{0}\right)\eta\right]^{2}\ d\xi\ d\eta
+\]
+
+\end_inset
+
+Using Maxima symbolic manipulator we can simplify this as,
+\begin_inset Formula 
+\[
+I_{x}=\left|\vec{A}_{T}\right|\,n_{x}\left(\frac{x_{0}^{2}+x_{1}^{2}+x_{2}^{2}+x_{0}x_{1}+x_{0}x_{2}+x_{1}x_{2}}{12}\right)
+\]
+
+\end_inset
+
+Therefore the formula for centroid of a solid with 
+\begin_inset Formula $N$
+\end_inset
+
+ enclosing triangles becomes,
+\begin_inset Formula 
+\[
+\bar{x}=\frac{1}{Volume}\frac{1}{2}\sum_{i=0}^{N-1}\left|\vec{A}_{Ti}\right|\,n_{xi}\left(\frac{x_{0}^{2}+x_{1}^{2}+x_{2}^{2}+x_{0}x_{1}+x_{0}x_{2}+x_{1}x_{2}}{12}\right)_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{x}=\frac{1}{24}\frac{1}{Volume}\sum_{i=0}^{N-1}\left|\vec{A}_{Ti}\right|\,n_{xi}\left(x_{0}^{2}+x_{1}^{2}+x_{2}^{2}+x_{0}x_{1}+x_{0}x_{2}+x_{1}x_{2}\right)_{i}
+\]
+
+\end_inset
+
+Similarly, 
+\begin_inset Formula 
+\[
+\bar{y}=\frac{1}{24}\frac{1}{Volume}\sum_{i=0}^{N-1}A_{Ti}\,n_{yi}\left(y_{0}^{2}+y_{1}^{2}+y_{2}^{2}+y_{0}y_{1}+y_{0}y_{2}+y_{1}y_{2}\right)_{i}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\bar{z}=\frac{1}{24}\frac{1}{Volume}\sum_{i=0}^{N-1}\left|\vec{A}_{Ti}\right|\,n_{zi}\left(z_{0}^{2}+z_{1}^{2}+z_{2}^{2}+z_{0}z_{1}+z_{0}z_{2}+z_{1}z_{2}\right)_{i}
+\]
+
+\end_inset
+
+The above expressions can be further simplified by realizing that 
+\begin_inset Formula $\left|\vec{A}_{T}\right|\,\left(n_{x},n_{y},n_{z}\right)=\overrightarrow{0-1}\times\overrightarrow{0-2}$
+\end_inset
+
+, which can be calculated only once and the 
+\begin_inset Formula $x$
+\end_inset
+
+- 
+\begin_inset Formula $y$
+\end_inset
+
+- and 
+\begin_inset Formula $z$
+\end_inset
+
+-components can be used in respective equations.
+ It is advisable to translate the solid close to the origin for the numerical
+ calculations so that the numerical errors due to squaring of large numbers
+ is reduced.
+ The actual centroid can be obtained by translating back by the same amount.
+\end_layout
+
+\end_body
+\end_document
