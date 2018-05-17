@@ -124,3 +124,55 @@ the solid close to the origin for the numerical calculations so that
 the numerical errors due to squaring of large numbers is reduced.
 The actual centroid can be obtained by translating back by the same
 amount.
+
+A sample program written in Java to implement the algorithm is given below:
+
+```Java
+/**
+ * @author Sourabh Bhat (heySourabh@gmail.com)
+ * Calculates the centroid point of a solid formed by a set of triangles.
+ * The triangles must have points either all-clockwise or
+ * all-anti-clockwise, looking from outside of the solid.
+ *
+ * @param triangles array of triangles
+ * @return centroid point of solid region enclosed by the set of triangles
+ */
+public static Point centroid(TriGeom[] triangles) {
+    Point translateBy = boundingBox(triangles).midPoint();
+    TriGeom[] newTriangles = translateTriangles(triangles, -translateBy.x, -translateBy.y, -translateBy.z);
+
+    double vol = signedVolume(newTriangles);
+    Vector centroidPos = new Vector(0, 0, 0);
+
+    for (TriGeom t : newTriangles) {
+        centroidPos = centroidPos.add(scaledCentroidUnder(t));
+    }
+    centroidPos = centroidPos.mult(1.0 / vol / 24.0);
+    centroidPos = centroidPos.add(new Vector(translateBy.x, translateBy.y, translateBy.z));
+
+    return new Point(centroidPos.x, centroidPos.y, centroidPos.z);
+}
+```
+
+```Java
+/**
+* author Sourabh Bhat (heySourabh@gmail.com)
+**/
+private static Vector scaledCentroidUnder(TriGeom tri) {
+    Point[] p = tri.points();
+    Point p0 = p[0];
+    Point p1 = p[1];
+    Point p2 = p[2];
+
+    Vector v1 = new Vector(p0, p1);
+    Vector v2 = new Vector(p0, p2);
+
+    Vector areaVector = v1.cross(v2);
+
+    double xc = areaVector.x * (p0.x * p0.x + p1.x * p1.x + p2.x * p2.x + p0.x * p1.x + p0.x * p2.x + p1.x * p2.x);
+    double yc = areaVector.y * (p0.y * p0.y + p1.y * p1.y + p2.y * p2.y + p0.y * p1.y + p0.y * p2.y + p1.y * p2.y);
+    double zc = areaVector.z * (p0.z * p0.z + p1.z * p1.z + p2.z * p2.z + p0.z * p1.z + p0.z * p2.z + p1.z * p2.z);
+
+    return new Vector(xc, yc, zc);
+}
+```
