@@ -505,7 +505,7 @@ Therefore the formula for centroid of a solid with
 Similarly, 
 \begin_inset Formula 
 \[
-\bar{y}=\frac{1}{24}\frac{1}{Volume}\sum_{i=0}^{N-1}A_{Ti}\,n_{yi}\left(y_{0}^{2}+y_{1}^{2}+y_{2}^{2}+y_{0}y_{1}+y_{0}y_{2}+y_{1}y_{2}\right)_{i}
+\bar{y}=\frac{1}{24}\frac{1}{Volume}\sum_{i=0}^{N-1}\left|\vec{A}_{Ti}\right|\,n_{yi}\left(y_{0}^{2}+y_{1}^{2}+y_{2}^{2}+y_{0}y_{1}+y_{0}y_{2}+y_{1}y_{2}\right)_{i}
 \]
 
 \end_inset

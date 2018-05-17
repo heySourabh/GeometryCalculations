@@ -111,7 +111,7 @@ triangles becomes,
 
 Similarly,
 
-![](https://latex.codecogs.com/gif.latex?%5Cbar%7By%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7DA_%7BTi%7D%5C%2Cn_%7Byi%7D%5Cleft%28y_%7B0%7D%5E%7B2%7D&plus;y_%7B1%7D%5E%7B2%7D&plus;y_%7B2%7D%5E%7B2%7D&plus;y_%7B0%7Dy_%7B1%7D&plus;y_%7B0%7Dy_%7B2%7D&plus;y_%7B1%7Dy_%7B2%7D%5Cright%29_%7Bi%7D)
+![](https://latex.codecogs.com/gif.latex?%5Cbar%7By%7D%3D%5Cfrac%7B1%7D%7B24%7D%5Cfrac%7B1%7D%7BVolume%7D%5Csum_%7Bi%3D0%7D%5E%7BN-1%7D%5Cleft%7C%5Cvec%7BA%7D_%7BTi%7D%5Cright%7C%5C%2Cn_%7Byi%7D%5Cleft%28y_%7B0%7D%5E%7B2%7D&plus;y_%7B1%7D%5E%7B2%7D&plus;y_%7B2%7D%5E%7B2%7D&plus;y_%7B0%7Dy_%7B1%7D&plus;y_%7B0%7Dy_%7B2%7D&plus;y_%7B1%7Dy_%7B2%7D%5Cright%29_%7Bi%7D)
 
 and
 
